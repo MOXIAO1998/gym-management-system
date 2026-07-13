@@ -1,12 +1,21 @@
 package com.gym.service;
 
-import org.springframework.stereotype.Service;
+import com.gym.pojo.Equipment;
 
-@Service
+import java.util.List;
+
 public interface EquipmentService {
 
+    List<Equipment> findAll();
+
+    Boolean deleteByEquipmentId(Integer equipmentId);
+
+    Boolean insertEquipment(Equipment equipment);
+
+    Boolean updateEquipmentByEquipmentId(Equipment equipment);
+
+    List<Equipment> selectByEquipmentId(Integer equipmentId);
 
     Integer selectTotalCount();
-
 
 }
