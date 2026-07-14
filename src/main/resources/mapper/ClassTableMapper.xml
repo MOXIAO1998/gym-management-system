@@ -16,8 +16,8 @@
     </delete>
 
     <insert id="insertClass" parameterType="classTable">
-        INSERT INTO class_table(class_id, class_name, class_begin, class_time, coach)
-        VALUES (#{classId}, #{className}, #{classBegin}, #{classTime}, #{coach})
+        INSERT INTO class_table(class_id, class_name, class_begin, class_length, coach)
+        VALUES (#{classId}, #{className}, #{classBegin}, #{classLength}, #{coach})
     </insert>
 
     <select id="selectByClassId" parameterType="java.lang.Integer" resultType="classTable">

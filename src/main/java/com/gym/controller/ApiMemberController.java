@@ -105,7 +105,7 @@ public class ApiMemberController {
         List<Member> memberList = memberService.selectByMemberAccount(memberAccount);
         Map<String, Object> resp = new HashMap<>();
         resp.put("success", true);
-        if (memberList != null) {
+        if (memberList != null && !memberList.isEmpty()) {
             resp.put("memberList", memberList);
         } else {
             resp.put("noMessage", "member account not found！");

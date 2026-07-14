@@ -52,6 +52,7 @@ public class ApiUserController {
         Member member1 = (Member) session.getAttribute("user");
         if (member1 != null && member != null) {
             member.setMemberAccount(member1.getMemberAccount());
+            member.setMemberPassword(member1.getMemberPassword());
             member.setCardClass(member1.getCardClass());
             member.setCardTime(member1.getCardTime());
             member.setCardNextClass(member1.getCardNextClass());
